@@ -1,0 +1,70 @@
+\documentclass{article}
+
+\begin{document}
+\title{Mandatory assignment two, INF3200 A15\\
+        Peer-to-peer leader election}
+\maketitle
+
+% arch p2p
+% leader election
+% joins and leaves
+% minimum of 10 peers
+
+\section{Introduction}
+In this assignment we want you to implement leader election on top of a
+peer-to-peer network.  All the peers in the network must agree on who the
+leader is and only one peer can be leader at a time. To make this interesting
+we want you to support peers leaving the network.
+
+\section{Leader Election}
+It is difficult to make everyone agree on something in a distributed system,
+yet sometimes necessary. It's for eg often necessary to have one node in your
+system act as leader or coordinator. Algorithms of varying complexity with
+varying consistency guarantees exist, a very simple algorithm for leader
+election is the bully algorithm, while a fairly complex one is paxos.
+
+\section{Requirements}
+\begin{itemize}
+    \item Support at least 10 nodes in a p2p network structure of your own
+    choice.
+
+    \item Support graceful shutdown of nodes. On receiving a signal to shut
+    down, a node should leave the network.
+
+    \item Leader election. There should at all times be a single leader.
+    A pertinent Q: What happens if the leader leaves the network?
+\end{itemize}
+
+\section{Hand-in}
+In your report, briefly present the details of your approach to the assignment.
+Then discuss the details that are interesting to you. We want to see that you
+can assess the strengths and weaknesses of your implementation. Think outside
+of the context of the rocks cluster.  The delivery should include:
+
+\begin{enumerate}
+    \item Source code with instructions
+    on how to run.
+    \item Report.
+\end{enumerate}
+
+\section{Other things}
+\begin{itemize}
+    \item There will be a demo presentation during the colloquium following the
+    deadline. Present your work and demonstrate it.
+
+    \item The hand in will still be on github.     
+
+    \item Conscientious students have good experimental evaluations of their
+    systems.
+
+    \item Start early, fail early. (Make it better early.)
+
+    \item Deadline Monday, November 2nd.
+\end{itemize}
+
+\section{References}
+\begin{enumerate}
+    \item \verb|https://google.com|
+\end{enumerate}
+
+\end{document}
